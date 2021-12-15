@@ -28,8 +28,8 @@ function collect_ratings(){
 
     //10 - Prevent divide by zero
     if (ratings.count !== 0) {
-      //11 - Calculate Average Rating
-      ratings.average = rating.sum / ratings.count;
+      //11 - Calculate Average Rating  
+      ratings.average = ratings.sum / ratings.count;
     }
 
 //12 - Return Rating
@@ -39,6 +39,7 @@ return ratings;
 
 //13 - Change Event - Handler
 document.addEventListener("change", () => {
-    let ratings = collect_ratings(); 
+    let ratings = collect_ratings();
+    document.querySelector('#average').value = ratings.average.toFixed(2);
 });
 
